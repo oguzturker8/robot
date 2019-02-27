@@ -1,0 +1,44 @@
+# robot_odev1
+%Loading kısmı gitmediğinden kaydededmedim. Metin dosyasına yazdım.
+%Matris
+x=[1 6 0 2 0 2 0 1 5]
+n=length(x)
+D=length(x)
+
+%1.Soru
+
+
+Soru_1 = (-200)*eps^((-0.02)*sqrt(x(1)^2+x(2)^2))
+
+%2.Soru
+s2sum1 = sum(x(1:D) .^2)
+s2sum2 = sum(cosd(2*pi*x(1:D)))
+Soru_2 = (-20)*eps^(-0.02*sqrt(D^(-1)*s2sum1))-(eps^(D^(-1)*s2sum2))+20+eps
+
+%3.Soru
+s3sum1 = sum(abs(x(1:D).*sind(x(1:D))+0.1*x(1:D)))
+Soru_3 = s3sum1
+
+%4.Soru
+s4prod1 = prod(sqrt(x(1:D).*sind(x(1:D))))
+Soru_4 = s4prod1
+
+%5.Soru
+s5sum1  = sum((x(1:D).^2)/4000)
+s5prod1 = prod(cosd(x(1:D)/sqrt(x(1:D))))
+Soru_5 = s5sum1-s5prod1
+
+%6.Soru
+s6sum1 = sum(eps^(-0.2)*sqrt(x(1:D).^2+x(1+1:D+1))+3*(cosd(2*x(1:D)+sind(2*x(1+1:D+1)))))
+Soru_6 = s6sum1
+
+%7.Soru
+A = (x(1-1:D-1)*sind(x(1:D)+sind(x(1+1:D+1))))
+B = (x(1-1:D-1)^2-2*x(1:D)+3*x(1+1:D+1)-cosd(x(1+1:D+1)))
+s7sum1 = sum((1:9)*x(1:9)^2)
+s7sum2 = sum(20*(1:9)*sind(A)^2)
+s7sum3 = sum((1:9)*log(10,(1+(1:9)*B^2)))
+
+Soru_7 = s7sum1+s7sum2+s7sum3
+
+
